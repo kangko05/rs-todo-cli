@@ -19,8 +19,12 @@ impl Item {
         self.title = String::from(title);
     }
 
-    pub fn update_status(&mut self) {
-        self.status_done = !self.status_done;
+    pub fn update_status(&mut self, status: bool) {
+        self.status_done = status;
+    }
+
+    pub fn to_string(&self) -> String {
+        format!("{} | {}", self.title, self.status_done)
     }
 }
 
