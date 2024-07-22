@@ -1,6 +1,6 @@
 #![allow(dead_code, unused)]
 
-use std::{borrow::BorrowMut, error::Error, fmt::Display, ops::Deref};
+use std::{error::Error, fmt::Display, fs};
 
 use super::Item;
 
@@ -11,6 +11,10 @@ pub struct List {
 impl List {
     pub fn new() -> List {
         List { list: Vec::new() }
+    }
+
+    pub fn from() {
+        // read save dir
     }
 
     pub fn add(&mut self, todo_title: &str) {
